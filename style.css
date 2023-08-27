@@ -156,11 +156,6 @@ button {
  * ALERT ERROR
  */
 
-.alert-error.open {
-  visibility: visible;
-  transform: translateY(0);
-}
-
 .alert-error {
   position: absolute;
   background-color: var(--bg-error);
@@ -171,7 +166,10 @@ button {
   color: var(--tt-error);
   padding: 0.8rem 0;
   font-weight: bold;
-  visibility: hidden;
-  transform: translateY(-10);
-  transition: transform 0.5s;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.alert-error.open {
+  opacity: 1;
 }
