@@ -21,12 +21,19 @@
   --bg-error: rgba(240, 62, 62, 1);
   --tt-error: rgba(255, 255, 255, 1);
   --bg-input: rgba(220, 226, 233, 1);
+  --bg-button-hover: rgba(1, 71, 92, 1);
 }
 
 body {
   font-family: "Robot", sans-serif;
   background-color: rgb(4, 9, 36);
+}
+
+body,
+input,
+button {
   font-size: 1.6rem;
+  line-height: 2rem;
 }
 
 .container {
@@ -51,6 +58,10 @@ body {
   color: var(--tt-heading);
 }
 
+.card form {
+  width: 30rem;
+}
+
 .card form h1 {
   margin: 0 0 3.2rem;
 }
@@ -69,6 +80,7 @@ body {
   background-color: var(--bg-input);
   padding: 1.6rem;
   border-radius: 0.4rem;
+  font-size: 1.6rem;
 }
 
 .card form input:focus {
@@ -77,8 +89,65 @@ body {
 
 .card form input::placeholder {
   color: var(--tt-placeholder);
+  font-size: 1.6rem;
 }
 
 .card form .input-wrapper + .input-wrapper {
   margin-top: 1.6rem;
+}
+
+.card form button {
+  margin-top: 3.2rem;
+  padding: 1.6rem;
+  width: 100%;
+  border: none;
+  background-color: var(--bg-button);
+  color: var(--tt-button);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  font-weight: bold;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+
+.card form button:hover {
+  background-color: var(--bg-button-hover);
+}
+
+/*
+ * MODAL
+ */
+
+.modal-wrapper {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  inset: 0;
+  display: grid;
+  place-content: center;
+  visibility: hidden;
+}
+
+.modal-wrapper.open {
+  visibility: visible;
+}
+
+.modal {
+  position: relative;
+}
+
+.modal button {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.modal button:hover {
+  transform: scale(1.1);
 }
