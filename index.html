@@ -1,15 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+
+  <!--PRECONECT-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!--META-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
   <title>Calculadora IMC</title>
+
+  <!--STYLE-->
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!--SCRIPT-->
+  <script src="./main.js" defer></script>
+
 </head>
 <body>
 
-  
+  <div class="container">
 
-  <script src="./main.js"></script>
+    <main class="card">
+      <form>
+        <legend class="title">Cálculo de IMC</legend>
+
+        <div class="input-wrapper">
+          <label for="weight">Peso (KG)</label>
+          <input type="number" placeholder="60" name="weight" id="weight"/>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="height">Altura (M)</label>
+          <input type="number" placeholder="165" name="height" id="height"/>
+        </div>
+
+        <button type="submit">Calcular IMC <img src="./assets/arrow-up-right.svg" alt="Seta para direita"></button>
+        
+      </form>
+    </main>
+
+  </div>
+
 </body>
 </html>
