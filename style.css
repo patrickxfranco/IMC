@@ -20,6 +20,7 @@
   --bg-button: rgba(2, 121, 157, 1);
   --bg-error: rgba(240, 62, 62, 1);
   --tt-error: rgba(255, 255, 255, 1);
+  --bg-input: rgba(220, 226, 233, 1);
 }
 
 body {
@@ -41,4 +42,43 @@ body {
   margin-bottom: 10rem;
   border-radius: 0.6rem;
   box-shadow: 0rem 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+}
+
+.card .title {
+  font-size: 3.2rem;
+  line-height: 4rem;
+  font-weight: bold;
+  color: var(--tt-heading);
+}
+
+.card form h1 {
+  margin: 0 0 3.2rem;
+}
+
+.card form label {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: var(--tt-label);
+  margin: 0 0 0.8rem;
+  display: block;
+}
+
+.card form input {
+  width: 100%;
+  border: 1px solid var(--bd-input);
+  background-color: var(--bg-input);
+  padding: 1.6rem;
+  border-radius: 0.4rem;
+}
+
+.card form input:focus {
+  outline: 2px solid var(--ot-input);
+}
+
+.card form input::placeholder {
+  color: var(--tt-placeholder);
+}
+
+.card form .input-wrapper + .input-wrapper {
+  margin-top: 1.6rem;
 }
