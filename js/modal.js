@@ -1,3 +1,4 @@
+import { inputWeight, inputHeight } from './main.js'
 export const Modal = {
 
   imcValue: document.querySelector('.modal .title span'),
@@ -9,6 +10,8 @@ export const Modal = {
   },
   close() {
     Modal.wrapper.classList.remove('open')
+    inputWeight.value = ""
+    inputHeight.value = ""
   }
 }
 
